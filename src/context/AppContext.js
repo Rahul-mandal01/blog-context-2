@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import { baseUrl } from "../baseUrl";
 
+
 export const AppContext = createContext();
 
 export default function AppContextProvider({ children }) {
@@ -10,9 +11,19 @@ export default function AppContextProvider({ children }) {
   const [totalPages, setTotalPages] = useState(null);
 
   // Fetch Blog Data
-  const fetchBlogPosts = async (page = 1) => {
+  const fetchBlogPosts = async (page = 1, tag=null, category) => {
     setLoading(true);
     let url = `${baseUrl}?page=${page}`;
+
+    if(tag){
+      url += `&tag=${tag}`;
+    }
+
+    if(category){
+      url += `&category = ${category}`;
+    }
+
+
     try {
       const res = await fetch(url);
       const data = await res.json();
