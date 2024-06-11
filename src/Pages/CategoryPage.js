@@ -12,6 +12,7 @@ const CategoryPage = () => {
 
   return (
     <div>
+    
         <Header/>
 
         <div>
