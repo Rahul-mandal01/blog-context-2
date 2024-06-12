@@ -9,7 +9,7 @@ import TagPage from "./Pages/TagPage";
 
 
 
-export default function App() {
+function App() {
   const { fetchBlogPosts } = useContext(AppContext);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -29,8 +29,8 @@ export default function App() {
     }
 
     else if(location.pathname.includes("categories")){
-      const category = location.pathname.split("/").at(-1).replaceAll("-","");
-      fetchBlogPosts(Number(page), null, category);
+      const category = location.pathname.split("/").at(-1).replaceAll("-"," ");
+      fetchBlogPosts(Number(page), null , category);
     }
 
     else{
@@ -51,3 +51,5 @@ export default function App() {
 
   );
 }
+
+export default App;
