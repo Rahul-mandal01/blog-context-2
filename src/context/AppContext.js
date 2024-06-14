@@ -22,7 +22,7 @@ export default function AppContextProvider({ children }) {
     }
 
     if(category){
-      url += `&category = ${category}`;
+      url += `&category=${category}`;
     }
 
 
@@ -46,7 +46,10 @@ export default function AppContextProvider({ children }) {
 
   // Handle When Next and Previous button are clicked
   const handlePageChange = (page) => {
-    navigate({search: `?page=${page}`});
+    navigate({
+      // Adding query parameters
+      search: `?page=${page}`
+    });
     setPage(page);
 
   };
