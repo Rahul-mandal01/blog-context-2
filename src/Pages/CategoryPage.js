@@ -7,7 +7,7 @@ import Blogs from '../components/Blogs';
 const CategoryPage = () => {
 
   const navigation = useNavigate();
-  const location = useLocation;
+  const location = useLocation();
   const category = location.pathname.split("/").at(-1);
 
   return (
