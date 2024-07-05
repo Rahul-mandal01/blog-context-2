@@ -9,6 +9,7 @@ import TagPage from "./Pages/TagPage";
 
 
 
+
 function App() {
   const { fetchBlogPosts } = useContext(AppContext);
 
@@ -44,7 +45,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/blog/:blogId" element={<BlogPage/>} />
       <Route path="/tags/:tag" element={<TagPage/>} />
-      <Route path="/category/:category" element={<CategoryPage/>} />
+      <Route path="/categories/:category" element={<CategoryPage/>} />
     </Routes>
 
   );
