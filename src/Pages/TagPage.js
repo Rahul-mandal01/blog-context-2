@@ -9,7 +9,7 @@ const TagPage = () => {
 
   const navigation = useNavigate();
   const location = useLocation();
-  const tag = location.pathname.split("/").at(-1).replaceAll("-","");
+  const tag = location.pathname.split("/").at(-1);
 
   return (
     <div>
