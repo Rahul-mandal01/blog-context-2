@@ -13,7 +13,7 @@ import TagPage from "./Pages/TagPage";
 function App() {
   const { fetchBlogPosts } = useContext(AppContext);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   const location = useLocation();
 
@@ -37,7 +37,7 @@ function App() {
     else{
       fetchBlogPosts(Number(page));
     }
-    }, [location.pathname, location.search]);
+    }, [location.pathname, location.search]); 
 
   return (
 
