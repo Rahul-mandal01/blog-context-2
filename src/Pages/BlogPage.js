@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
 import Header from '../components/Header';
-import Blogs from '../components/Blogs';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import BlogDetails from '../components/BlogDetails';
@@ -45,11 +44,12 @@ const BlogPage = () => {
   }, [location.pathname])
 
   return (
-    <div>
+    <div  >
         <Header/>
-        <div>
-            <button onClick={() => navigation(-1)}>
-              back
+        <div className='mt-[100px] mb-6 max-w-2xl mx-auto'>
+            <button onClick={() => navigation(-1)}
+            className='border-2 border-gray-300 py-1 px-4 rounded-md '
+            >Back
             </button>
         </div>
 
@@ -62,16 +62,18 @@ const BlogPage = () => {
           ):
             blog ?
             (
-                <div>
-                  <BlogDetails post={blog} />
-                  <h2> Related Blogs </h2>
+                <div> 
+                  <BlogDetails post={blog}/>
+                  <h2
+                   className='max-w-2xl mx-auto mt-12 font-bold text-3xl mb-8' 
+                   > Related Blogs </h2>
                   {
                     relatedBlogs.map( (post) =>(
-                      <div key={post.id}>
+                      <div key={post.id} className='my-4'>
                         <BlogDetails post = {post} />
                       </div>
 
-                    ))
+                    )) 
                   }
                 </div>
             ):
