@@ -16,14 +16,22 @@ const CategoryPage = () => {
         <Header/>
 
         <div>
-          <button onClick={ () => navigation(-1)}>
-            back
-          </button>
 
-          <h2>
-            Blogs On <span>{category}</span>
-          </h2>
-          <Blogs/>
+          <div className='mt-[100px] max-w-2xl mx-auto flex items-center space-x-2'>
+            <button onClick={ () => navigation(-1)}
+            className='border-2 border-gray-300 py-1 px-4 rounded-md '
+            >
+              Back
+            </button>
+
+            <h2 className='text-xl font-bold'>
+              Blogs On <span className='underline'>{category}</span>
+            </h2>
+          </div>
+
+          <div className="-mt-[80px]">
+            <Blogs/>
+          </div>
           <Pagination/>
         </div>
 
