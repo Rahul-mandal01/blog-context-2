@@ -14,17 +14,21 @@ const TagPage = () => {
   return (
     <div>
         <Header/>
-        <div>
-          <button  onClick={() => navigation(-1)}>
-            back
+        <div className='mt-[100px] max-w-2xl mx-auto flex items-center space-x-2'>
+          <button  onClick={() => navigation(-1)}
+          className='border-2 border-gray-300 py-1 px-4 rounded-md '>
+            Back
           </button>
 
-          <h2>
-            Blogs Tagged <span>#{tag}</span>
+          <h2 className='text-xl font-bold'>
+            Blogs Tagged <span className='underline text-blue-700'>#{tag}</span>
           </h2>
         </div>
+        
+        <div className="-mt-[80px]">
+          <Blogs/>
+        </div>
 
-        <Blogs/>
         <Pagination/>
 
     </div>
