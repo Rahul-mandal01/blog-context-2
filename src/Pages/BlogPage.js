@@ -46,9 +46,9 @@ const BlogPage = () => {
   return (
     <div  >
         <Header/>
-        <div className='mt-[100px] mb-6 max-w-2xl mx-auto'>
+        <div className='mt-[100px] mb-6 max-w-2xl flex ml-4 md:mx-auto'>
             <button onClick={() => navigation(-1)}
-            className='border-2 border-gray-300 py-1 px-4 rounded-md '
+            className='border-2 border-gray-300 py-1 px-4 rounded-md hover:bg-gray-100 hover:border-gray-400'
             >Back
             </button>
         </div>
@@ -65,7 +65,7 @@ const BlogPage = () => {
                 <div> 
                   <BlogDetails post={blog}/>
                   <h2
-                   className='max-w-2xl mx-auto mt-12 font-bold text-3xl mb-8' 
+                   className='max-w-2xl mt-12 font-bold text-3xl mb-8  flex ml-4 md:mx-auto ' 
                    > Related Blogs </h2>
                   {
                     relatedBlogs.map( (post) =>(
