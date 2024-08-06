@@ -17,9 +17,9 @@ const CategoryPage = () => {
 
         <div>
 
-          <div className='mt-[100px] max-w-2xl mx-auto flex items-center space-x-2'>
+          <div className='mt-[100px] max-w-2xl flex items-center space-x-2 ml-4 md:mx-auto'>
             <button onClick={ () => navigation(-1)}
-            className='border-2 border-gray-300 py-1 px-4 rounded-md '
+            className='border-2 border-gray-300 py-1 px-4 rounded-md hover:bg-gray-100 hover:border-gray-400'
             >
               Back
             </button>
