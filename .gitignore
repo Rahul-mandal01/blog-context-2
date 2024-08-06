@@ -10,6 +10,7 @@
 
 # production
 /build
+/.toml
 
 # misc
 .DS_Store
